@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machugu Weather</title>
+    <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌤️ Machugu Weather</h1>
+            <p class="subtitle">Get real-time weather information</p>
+        </header>
+
+        <div class="search-section">
+            <input 
+                type="text" 
+                id="cityInput" 
+                placeholder="Enter city name..." 
+                class="search-input"
+            >
+            <button id="searchBtn" class="search-btn">Search</button>
+            <button id="geoBtn" class="geo-btn">📍 Use My Location</button>
+        </div>
+
+        <!-- Tanzania Regions Quick Access -->
+        <div class="tanzania-section">
+            <div class="tanzania-header">
+                <h3>🇹🇿 Tanzania Regions</h3>
+                <div class="view-toggle">
+                    <button class="toggle-btn active" data-view="cards">📊 Cards</button>
+                    <button class="toggle-btn" data-view="list">📋 List</button>
+                </div>
+            </div>
+            <div id="tanzaniaCards" class="tanzania-cards-grid"></div>
+            <div id="tanzaniaList" class="tanzania-list-view hidden"></div>
+        </div>
+
+        <div id="errorMessage" class="error-message"></div>
+
+        <div id="weatherContainer" class="weather-container hidden">
+            <!-- Current Weather -->
+            <div class="current-weather">
+                <div class="city-info">
+                    <h2 id="cityName"></h2>
+                    <p id="weatherDate"></p>
+                </div>
+                
+                <div class="weather-main">
+                    <div class="temperature">
+                        <span id="temp"></span>
+                        <span class="unit">°C</span>
+                    </div>
+                    <div class="weather-details">
+                        <img id="weatherIcon" src="" alt="Weather icon">
+                        <p id="weatherDesc"></p>
+                    </div>
+                </div>
+
+                <div class="weather-info-grid">
+                    <div class="info-box">
+                        <p class="label">Feels Like</p>
+                        <p id="feelsLike" class="value"></p>
+                    </div>
+                    <div class="info-box">
+                        <p class="label">Humidity</p>
+                        <p id="humidity" class="value"></p>
+                    </div>
+                    <div class="info-box">
+                        <p class="label">Wind Speed</p>
+                        <p id="windSpeed" class="value"></p>
+                    </div>
+                    <div class="info-box">
+                        <p class="label">Pressure</p>
+                        <p id="pressure" class="value"></p>
+                    </div>
+                    <div class="info-box">
+                        <p class="label">UV Index</p>
+                        <p id="uvIndex" class="value"></p>
+                    </div>
+                    <div class="info-box">
+                        <p class="label">Visibility</p>
+                        <p id="visibility" class="value"></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5-Day Forecast -->
+            <div class="forecast-section">
+                <h3>5-Day Forecast</h3>
+                <div id="forecastContainer" class="forecast-grid"></div>
+            </div>
+        </div>
+
+        <div id="loadingSpinner" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Loading weather data...</p>
+        </div>
+    </div>
+
+    <script src="weather-app.js"></script>
+</body>
+</html>

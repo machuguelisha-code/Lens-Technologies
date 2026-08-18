@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lens</title>
+    <link rel="stylesheet" href="style.css">
+    <script>document.documentElement.classList.add('js');</script>
+    <script src="config.js"></script>
+</head>
+<body>
+    <div class="app">
+        <header class="header">
+            <img src="lens-logo.png" alt="Lens logo" class="logo">
+            <div class="title-section">
+                <h1>Lens</h1>
+                <h2>Machugu Foundation</h2>
+            </div>
+            <nav class="main-nav">
+                <button class="nav-btn active" data-page="chat">💬 Chat</button>
+                <a href="https://machuguweather.lovable.app" target="_blank" rel="noopener noreferrer" class="nav-btn weather-link">🌤️ Weather</a>
+                <a href="https://machugujurimetric.lovable.app" target="_blank" rel="noopener noreferrer" class="nav-btn jurimetric-link">⚖️ Jurimetric</a>
+            </nav>
+            <div class="header-actions">
+                <a href="#review-page-section" class="section-link">Legal Research & Sources</a>
+            </div>
+        </header>
+        <section class="live-widgets" aria-label="Lens live widgets">
+            <div class="timezone-widget">
+                <span class="tanzania-flag" role="img" aria-label="Tanzania flag">🇹🇿</span>
+                <div>
+                    <span class="widget-label">Dar es Salaam</span>
+                    <strong id="tanzania-clock">--:--</strong>
+                </div>
+            </div>
+            <div class="timezone-widget">
+                <span class="widget-icon" aria-hidden="true">◷</span>
+                <div>
+                    <span class="widget-label">World time · UTC</span>
+                    <strong id="world-clock">--:--</strong>
+                </div>
+            </div>
+            <span id="chat-connection" class="connection-status" role="status">On-device chat</span>
+        </section>
+        <div id="chat-page" class="page-container active">
+            <div class="container">
+            <div class="sidebar">
+                <div class="resource-panel">
+                    <h2>Legal Resources</h2>
+                    <ul class="resource-list">
+                        <li class="expandable-service">
+                            <details>
+                                <summary>Legal Documents</summary>
+                                <div class="service-details">
+                                    <ul class="doc-list">
+                                        <li>Affidavits</li>
+                                        <li>Plaint</li>
+                                        <li>WSD</li>
+                                        <li>Memorandum of Understanding</li>
+                                        <li>MEMARTS</li>
+                                        <li>Deedpol</li>
+                                        <li>Deed of Gift</li>
+                                        <li>Informations</li>
+                                        <li>Contracts</li>
+                                        <li>Constitutions</li>
+                                        <li>Petitions</li>
+                                        <li>Memorandum of Appeal</li>
+                                        <li>Chamber Summons</li>
+                                        <li>Charge Sheet</li>
+                                        <li>Information</li>
+                                        <li>Notices</li>
+                                        <li>Demand Letters</li>
+                                        <li>Other Legal Documents</li>
+                                    </ul>
+                                </div>
+                            </details>
+                        </li>
+                        <li><a href="https://www.legaltech-talk.com" target="_blank" rel="noopener noreferrer">Legal Tech</a></li>
+                        <li class="expandable-service">
+                            <details>
+                                <summary>Legal Aid &amp; Consultancy Services</summary>
+                                <div class="service-details">
+                                    <p><strong>Advocate Rose Edward Ndege</strong><br>Phone: +255 764 539 900</p>
+                                    <p><strong>Advocate Peter Nicholaus</strong><br>Phone: +255 711 307 938<br>Email: ndegeattorneys@gmail.com</p>
+                                </div>
+                            </details>
+                        </li>
+                        <li>Legal Research</li>
+                    </ul>
+                </div>
+                <div class="contact-widget">
+                    <h3>Contact us</h3>
+                    <p>lenstechnology.tz@outlook.com</p>
+                </div>
+            </div>
+            <main class="news-panel full-newsfeed" aria-label="Legal News feed">
+                <div class="news-header">
+                    <h2>Legal Events</h2>
+                </div>
+                <div class="news-content">
+                    <div class="news-filter-controls">
+                        <button class="filter-btn active" data-filter="all">Show All</button>
+                        <button class="filter-btn" data-filter="law">Law</button>
+                        <button class="filter-btn" data-filter="policy">Policies</button>
+                        <button class="filter-btn" data-filter="research">Research</button>
+                        <button class="filter-btn" data-filter="briefing">Briefing</button>
+                    </div>
+                    <div class="news-video">
+                        <video controls muted playsinline poster="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80">
+                            <source src="https://media.istockphoto.com/id/1180566130/video/courtroom-justice.mp4?s=640x640&k=20&c=TW2vP0a0Gq9mAhh8qHh2LE2pLZ9u8JQ1Q-DYO7a8K4Q=" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="news-articles">
+                        <article class="news-item law">
+                            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=80" alt="Law and justice">
+                            <span class="news-tag">Law</span>
+                            <h3>Judicial reforms strengthen access to justice</h3>
+                            <p>New legal reforms continue to improve public access to legal services and transparency across the justice system.</p>
+                        </article>
+                        <article class="news-item policy">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Legal aid and policies">
+                            <span class="news-tag">Policies</span>
+                            <h3>Legal aid expansion reaches underserved communities</h3>
+                            <p>Authorities are scaling legal support programs to better serve low-income communities and rural populations.</p>
+                        </article>
+                        <article class="news-item research">
+                            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80" alt="Legal research">
+                            <span class="news-tag">Research</span>
+                            <h3>Digital legal tools improve case preparation</h3>
+                            <p>Technology-driven legal research and document review services are transforming how lawyers prepare for cases.</p>
+                        </article>
+                        <article class="news-item briefing">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80" alt="Legal briefing">
+                            <span class="news-tag">Briefing</span>
+                            <h3>Courts embrace digital filing and case transparency</h3>
+                            <p>Modern courts are adopting more efficient digital workflows to improve service delivery and reduce delays.</p>
+                        </article>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <div id="weather-page" class="page-container">
+            <iframe id="weather-iframe" src="weather.html" title="Weather Dashboard"></iframe>
+        </div>
+        <section id="review-page-section" class="review-page-section">
+            <div class="section-card">
+                <h2>Legal Research &amp; Sources</h2>
+                <ul class="channels-list">
+                    <li><a href="https://tanzlii.org" target="_blank" rel="noopener noreferrer">TANZLII</a></li>
+                    <li><a href="https://www.academia.edu" target="_blank" rel="noopener noreferrer">Academia</a></li>
+                    <li>Books</li>
+                    <li>Research</li>
+                    <li><a href="https://www.nbs.go.tz" target="_blank" rel="noopener noreferrer">Statistics</a></li>
+                </ul>
+            </div>
+        </section>
+        <footer class="app-footer">
+            <p>&copy; 2026 Machugu Foundation. All rights reserved.</p>
+        </footer>
+    </div>
+    <button id="samwel-toggle" class="samwel-toggle" type="button" aria-expanded="false" aria-controls="samwel-panel">
+        <span class="samwel-spark" aria-hidden="true">✦</span> Samwel AI
+    </button>
+    <aside id="samwel-panel" class="samwel-panel" aria-label="Samwel AI assistant" hidden>
+        <div class="samwel-header">
+            <div>
+                <p>YOUR AI GUIDE</p>
+                <h2>Samwel AI</h2>
+            </div>
+            <div class="samwel-actions">
+                <a id="samwel-open" class="samwel-open" href="https://samwel-ai.lovable.app" target="_blank" rel="noopener" aria-label="Open Samwel AI full screen">↗</a>
+                <button id="samwel-close" class="samwel-close" type="button" aria-label="Close Samwel AI">×</button>
+            </div>
+        </div>
+        <iframe id="samwel-frame" class="samwel-frame" src="https://samwel-ai.lovable.app" title="Samwel AI assistant" allow="clipboard-read; clipboard-write" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    </aside>
+    <script src="script.js"></script>
+    <script src="navigation.js"></script>
+    <script src="samwel-ai.js"></script>
+</body>
+</html>
