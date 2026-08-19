@@ -86,12 +86,22 @@ function bubble(text, who, source) {
   log.scrollTop = log.scrollHeight;
 }
 
+function matchedKeys(keys, q) {
+  return keys.filter((key) => {
+    const pattern = key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&').replace(/\s+/g, '\\s+');
+    return new RegExp(`(^|[^a-z])${pattern}`).test(q);
+  });
+}
+
 function answer(question) {
   const q = question.toLowerCase();
   const scored = KNOWLEDGE
-    .map((k) => ({ k, score: k.keys.reduce((n, key) => (q.includes(key) ? n + 1 : n), 0) }))
+    .map((k) => {
+      const hits = matchedKeys(k.keys, q);
+      return { k, score: hits.length, specificity: hits.reduce((n, key) => Math.max(n, key.length), 0) };
+    })
     .filter((s) => s.score > 0)
-    .sort((a, b) => b.score - a.score);
+    .sort((a, b) => b.score - a.score || b.specificity - a.specificity);
 
   if (!scored.length) {
     bubble(
