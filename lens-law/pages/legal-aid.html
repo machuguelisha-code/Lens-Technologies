@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Legal Aid &amp; Consultancy &middot; Lens Law</title>
+  <meta name="description" content="Free legal aid clinics and professional consultancy from the Machugu Foundation: book a consultation with an advocate." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body data-base="../" data-page="legal-aid">
+  <div id="site-header"></div>
+
+  <div class="page-hero" style="--hero-img:url('../assets/img/consult-group.jpg')">
+    <div class="wrap">
+      <p class="crumbs"><a href="../index.html">Lens Law</a> / Legal Aid &amp; Consultancy</p>
+      <h1>Legal Aid &amp; Consultancy</h1>
+      <p>Free, means-tested legal aid for those who cannot pay, and professional consultancy for those who can &mdash; the fees from one fund the other.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="grid grid-3">
+        <div class="card reveal"><div class="card-media"><span class="tag">Free</span><img src="../assets/img/consult-group.jpg" alt="Community legal aid clinic" /></div><div class="card-body"><h3>Walk-in clinics</h3><p>Wednesdays and Saturdays, 09:00&ndash;13:00. Advice, document drafting and referral. Bring identification and all your papers.</p></div></div>
+        <div class="card reveal"><div class="card-media"><span class="tag">Free</span><img src="../assets/img/consult-table.jpg" alt="Advocates advising a client" /></div><div class="card-body"><h3>Mobile outreach</h3><p>Monthly clinics in rural wards with paralegals, focused on land, succession and gender-based violence.</p></div></div>
+        <div class="card reveal"><div class="card-media"><span class="tag">Paid</span><img src="../assets/img/consult-handshake.jpg" alt="Client and advocate shaking hands" /></div><div class="card-body"><h3>Consultancy</h3><p>Corporate advisory, compliance audits, contract drafting, dispute strategy and training, billed hourly or per project.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="feature">
+        <div class="feature-media reveal"><img src="../assets/img/consult-meeting.jpg" alt="Consultation meeting in progress" /></div>
+        <div class="reveal">
+          <div class="section-label">What to expect</div>
+          <h2>Your first consultation, step by step</h2>
+          <ul class="checks">
+            <li><strong>Intake (10 min)</strong> &mdash; we record the facts and check for conflicts of interest.</li>
+            <li><strong>Assessment (15 min)</strong> &mdash; the advocate identifies the legal issue and the forum.</li>
+            <li><strong>Options (5 min)</strong> &mdash; each route with its cost, timeline and risk.</li>
+            <li><strong>Written summary</strong> &mdash; emailed or printed the same day.</li>
+            <li><strong>Means test</strong> &mdash; if you qualify, the matter moves to the pro bono docket.</li>
+          </ul>
+          <p class="muted">Everything you say is confidential. We will never charge for the first 30 minutes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="book">
+    <div class="wrap">
+      <div class="grid grid-2" style="align-items:start">
+        <div>
+          <div class="section-head">
+            <div class="section-label">Booking</div>
+            <h2>Book a consultation</h2>
+            <p>Choose a desk and a time. We confirm by phone or email within one working day.</p>
+          </div>
+          <div class="panel">
+            <form id="book-form">
+              <div class="form-row">
+                <div class="field"><label for="bk-name">Full name</label><input id="bk-name" required /></div>
+                <div class="field"><label for="bk-phone">Phone</label><input id="bk-phone" required placeholder="+255 7XX XXX XXX" /></div>
+              </div>
+              <div class="form-row">
+                <div class="field"><label for="bk-email">Email</label><input id="bk-email" type="email" required /></div>
+                <div class="field"><label for="bk-region">Region</label><input id="bk-region" required placeholder="e.g. Dar es Salaam" /></div>
+              </div>
+              <div class="form-row">
+                <div class="field">
+                  <label for="bk-area">Area of law</label>
+                  <select id="bk-area">
+                    <option>Land &amp; property</option>
+                    <option>Employment &amp; labour</option>
+                    <option>Family &amp; succession</option>
+                    <option>Criminal defence</option>
+                    <option>Contracts &amp; commercial</option>
+                    <option>Corporate &amp; compliance</option>
+                    <option>Human rights</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="bk-mode">Mode</label>
+                  <select id="bk-mode"><option>In person, Dar es Salaam</option><option>Phone call</option><option>Video call</option><option>At a mobile clinic</option></select>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="field"><label for="bk-date">Preferred date</label><input id="bk-date" type="date" /></div>
+                <div class="field"><label for="bk-time">Preferred time (EAT)</label><input id="bk-time" type="time" /></div>
+              </div>
+              <div class="field"><label for="bk-details">Briefly, what is the matter about?</label><textarea id="bk-details" rows="4" required placeholder="Do not include sensitive details you would rather give in person"></textarea></div>
+              <div class="field" style="display:flex;gap:10px;align-items:flex-start">
+                <input id="bk-aid" type="checkbox" style="width:auto;margin-top:4px" />
+                <label for="bk-aid" style="font-weight:400;margin:0">I would like to be considered for free legal aid (means-tested)</label>
+              </div>
+              <button class="btn btn-gold" type="submit">Request consultation</button>
+              <p class="form-note" id="bk-note" style="margin-top:12px" role="status"></p>
+            </form>
+          </div>
+        </div>
+        <aside>
+          <div class="panel" style="margin-bottom:18px">
+            <h3>Clinic timetable</h3>
+            <div class="table-wrap" style="border:0">
+              <table>
+                <tbody>
+                  <tr><td>Wednesday</td><td>09:00&ndash;13:00</td><td>Walk-in, Dar es Salaam</td></tr>
+                  <tr><td>Saturday</td><td>09:00&ndash;13:00</td><td>Walk-in, Dar es Salaam</td></tr>
+                  <tr><td>1st Friday</td><td>10:00&ndash;16:00</td><td>Mobile clinic, rotating ward</td></tr>
+                  <tr><td>Weekdays</td><td>14:00&ndash;17:00</td><td>Online consultations</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="panel" style="margin-bottom:18px">
+            <h3>Bring with you</h3>
+            <ul class="checks">
+              <li>National ID, passport or voter's card</li>
+              <li>Every document about your matter, in order of date</li>
+              <li>Any court papers already served on you</li>
+              <li>Names and contacts of witnesses</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Contact</h3>
+            <p class="muted">Machugu Foundation &middot; Lens Law<br />Dar es Salaam, Tanzania<br />
+            Phone: <a href="tel:+255700000000">+255 700 000 000</a><br />
+            Email: <a href="mailto:legalaid@lenslaw.co.tz">legalaid@lenslaw.co.tz</a></p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="../assets/js/main.js"></script>
+  <script>
+    document.getElementById('book-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('bk-name').value.trim();
+      const area = document.getElementById('bk-area').value;
+      const mode = document.getElementById('bk-mode').value;
+      const aid = document.getElementById('bk-aid').checked;
+      document.getElementById('bk-note').textContent =
+        `Thank you ${name}. Your request for a ${area.toLowerCase()} consultation (${mode.toLowerCase()}) has been captured`
+        + `${aid ? ', including your legal aid request' : ''}. This demo does not yet send email - call +255 700 000 000 to confirm immediately.`;
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>

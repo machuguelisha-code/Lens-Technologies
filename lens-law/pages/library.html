@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Library &middot; Lens Law</title>
+  <meta name="description" content="The Lens Law Library: law reports, textbooks, journals, open-access collections and a reading room in Dar es Salaam." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body data-base="../" data-page="library">
+  <div id="site-header"></div>
+
+  <div class="page-hero" style="--hero-img:url('../assets/img/law-library.jpg')">
+    <div class="wrap">
+      <p class="crumbs"><a href="../index.html">Lens Law</a> / Library</p>
+      <h1>Library</h1>
+      <p>A working collection for practitioners and students: law reports, texts, journals and curated open-access links, with a quiet reading room and Wi-Fi in Dar es Salaam.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-label">Collections</div>
+        <h2>What is on the shelves</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="card reveal"><div class="card-media"><span class="tag">Reports</span><img src="../assets/img/books-pen.jpg" alt="Law reports" /></div><div class="card-body"><h3>Law reports</h3><p>Tanzania Law Reports, East Africa Law Reports and bound Court of Appeal judgments.</p></div></div>
+        <div class="card reveal"><div class="card-media"><span class="tag">Texts</span><img src="../assets/img/library-spiral.jpg" alt="Library shelves" /></div><div class="card-body"><h3>Textbooks</h3><p>Core texts on contract, land, criminal procedure, evidence, company and labour law.</p></div></div>
+        <div class="card reveal"><div class="card-media"><span class="tag">Journals</span><img src="../assets/img/magazine.jpg" alt="Journals" /></div><div class="card-body"><h3>Journals</h3><p>Local and comparative law journals, plus the Foundation's own working paper series.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="grid grid-2">
+        <div>
+          <div class="section-head">
+            <div class="section-label">Open access</div>
+            <h2>Free collections we rely on</h2>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Collection</th><th>Use it for</th></tr></thead>
+              <tbody>
+                <tr><td><a href="https://tanzlii.org/" target="_blank" rel="noopener">TanzLII</a></td><td>Tanzanian statutes and judgments</td></tr>
+                <tr><td><a href="https://africanlii.org/" target="_blank" rel="noopener">AfricanLII</a></td><td>Comparative African authority</td></tr>
+                <tr><td><a href="https://www.doaj.org/" target="_blank" rel="noopener">DOAJ</a></td><td>Peer-reviewed open-access journals</td></tr>
+                <tr><td><a href="https://openknowledge.worldbank.org/" target="_blank" rel="noopener">World Bank Open Knowledge</a></td><td>Law and development research</td></tr>
+                <tr><td><a href="https://www.un.org/en/library" target="_blank" rel="noopener">UN Library</a></td><td>Treaties and international instruments</td></tr>
+                <tr><td><a href="https://www.gutenberg.org/" target="_blank" rel="noopener">Project Gutenberg</a></td><td>Classic jurisprudence in the public domain</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <div class="section-head">
+            <div class="section-label">Reading room</div>
+            <h2>Visit or borrow</h2>
+          </div>
+          <div class="panel" style="margin-bottom:18px">
+            <h3>Opening hours</h3>
+            <p class="muted">Monday to Friday 08:00&ndash;18:00, Saturday 09:00&ndash;13:00 EAT. Closed on public holidays.</p>
+            <h3 style="margin-top:18px">Membership</h3>
+            <ul class="checks">
+              <li>Free reference access for students with a valid ID</li>
+              <li>Borrowing for members of the bar and Foundation volunteers</li>
+              <li>Two-week loans, renewable once, reports are reference-only</li>
+              <li>Scanning desk for judgments not yet online</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Request a title</h3>
+            <form onsubmit="event.preventDefault(); this.querySelector('.form-note').textContent='Noted. In this demo nothing is sent - email library@lenslaw.co.tz to reserve.';">
+              <div class="field"><label for="lb-title">Title or citation</label><input id="lb-title" required /></div>
+              <div class="field"><label for="lb-email">Your email</label><input id="lb-email" type="email" required /></div>
+              <button class="btn btn-navy btn-sm" type="submit">Request</button>
+              <p class="form-note" style="margin-top:10px"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
