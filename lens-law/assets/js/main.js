@@ -35,7 +35,7 @@ function renderHeader() {
     <header class="site-header">
       <div class="header-inner wrap">
         <a class="logo" href="${BASE}index.html">
-          <span class="logo-mark">LL</span>
+          <img class="logo-mark" src="${BASE}assets/img/lens-law-mark.svg" alt="Lens Law wing mark" width="46" height="46" />
           <span class="logo-text">
             <span class="brand-word">Lens Law</span>
             <span class="brand-sub">Machugu Foundation</span>
@@ -67,6 +67,7 @@ function renderFooter() {
       <div class="wrap">
         <div class="footer-grid">
           <div class="footer-brand">
+            <img class="footer-mark" src="${BASE}assets/img/lens-law-mark-gold.svg" alt="" width="54" height="54" />
             <span class="brand-word">Lens Law</span>
             <span class="brand-sub">Machugu Foundation</span>
             <p class="muted" style="margin-top:16px;max-width:34ch">A legal knowledge platform of the Machugu Foundation: documents, jurisprudence, data and free legal aid for every Tanzanian.</p>

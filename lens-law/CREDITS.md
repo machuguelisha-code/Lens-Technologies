@@ -31,5 +31,7 @@ Attribution is nevertheless good practice; the source URL of each file is listed
 | newspaper.jpg | https://unsplash.com/photos/photo-1495020689067-958852a7765e |
 | team.jpg | https://unsplash.com/photos/photo-1521737604893-d14cc237f11d |
 
+Logo: `lens-law-mark.svg`, `lens-law-mark-gold.svg` and the favicons are vector traces of the wing mark supplied by the Machugu Foundation; not an Unsplash asset.
+
 Fonts: Playfair Display and Inter, served from Google Fonts under the SIL Open Font License.
 Weather data: [Open-Meteo](https://open-meteo.com/) free API (no key required).
