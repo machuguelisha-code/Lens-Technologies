@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Decided Cases &middot; Lens Law</title>
+  <meta name="description" content="Searchable digests of decided cases: the court, the year, the principle settled and the practical effect." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body data-base="../" data-page="decided-cases">
+  <div id="site-header"></div>
+
+  <div class="page-hero" style="--hero-img:url('../assets/img/gavel.jpg')">
+    <div class="wrap">
+      <p class="crumbs"><a href="../index.html">Lens Law</a> / Decided Cases</p>
+      <h1>Decided Cases</h1>
+      <p>Digests written for use, not for display: the issue, the holding, and the principle a judgment actually settles. Illustrative teaching digests &mdash; always read the full judgment before you cite it.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="panel" style="margin-bottom:26px">
+        <div class="form-row">
+          <div>
+            <label for="case-search">Search by party, issue or principle</label>
+            <input id="case-search" type="search" placeholder="e.g. termination, land, natural justice" />
+          </div>
+          <div>
+            <label for="case-area">Area of law</label>
+            <select id="case-area"><option value="">All areas</option></select>
+          </div>
+        </div>
+        <p class="form-note" id="case-count"></p>
+      </div>
+      <div class="grid grid-2" id="case-list"></div>
+    </div>
+  </section>
+
+  <section class="dark">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-label">How to read a digest</div>
+        <h2>Ratio, not result</h2>
+        <p>The outcome tells you who won. The ratio decidendi tells you what binds the next court. Our digests separate the two so you cite the right thing.</p>
+      </div>
+      <div class="grid grid-4">
+        <div class="panel"><h3>Issue</h3><p class="muted">The precise legal question the court had to answer.</p></div>
+        <div class="panel"><h3>Holding</h3><p class="muted">The court's answer, in one sentence.</p></div>
+        <div class="panel"><h3>Ratio</h3><p class="muted">The reasoning that carries precedential weight.</p></div>
+        <div class="panel"><h3>Effect</h3><p class="muted">What a practitioner must now do differently.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/cases.js"></script>
+</body>
+</html>

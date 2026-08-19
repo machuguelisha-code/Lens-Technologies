@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather &middot; Lens Law</title>
+  <meta name="description" content="Live weather for Tanzanian court stations and Lens Law legal aid outreach clinics." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body data-base="../" data-page="weather">
+  <div id="site-header"></div>
+
+  <div class="page-hero" style="--hero-img:url('../assets/img/weather-sky.jpg')">
+    <div class="wrap">
+      <p class="crumbs"><a href="../index.html">Lens Law</a> / Weather</p>
+      <h1>Weather</h1>
+      <p>Court appearances and village clinics happen outdoors as often as indoors. This desk carries live forecasts for the stations where our advocates and clients travel.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-label">Live forecast</div>
+        <h2>Court stations and clinic towns</h2>
+        <p id="wx-status" class="muted">Loading live conditions&hellip;</p>
+      </div>
+      <div class="weather-grid" id="wx-grid"></div>
+      <p class="form-note" style="margin-top:18px">Data: <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> free weather API, refreshed each time this page loads. Times are East Africa Time (UTC+3).</p>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="feature">
+        <div class="feature-media reveal"><img src="../assets/img/weather-rain.jpg" alt="Rain falling on a city street" /></div>
+        <div class="reveal">
+          <div class="section-label">Why a law site carries weather</div>
+          <h2>Rain moves hearings and closes roads</h2>
+          <p class="muted">During the long rains, ward tribunals in low-lying districts are frequently inaccessible, witnesses cannot travel, and mobile clinics must be re-routed. Weather is an operational input for access to justice, not a curiosity.</p>
+          <ul class="checks">
+            <li>Plan outreach clinics around heavy-rainfall days</li>
+            <li>Warn clients travelling to distant court stations</li>
+            <li>Evidence for adjournment applications caused by weather</li>
+            <li>Context for land, insurance and agricultural disputes</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/weather.js"></script>
+</body>
+</html>

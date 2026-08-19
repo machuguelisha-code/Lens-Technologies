@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Research &middot; Lens Law</title>
+  <meta name="description" content="The Lens Law research hub: working papers, methodology guides, citation rules and a research request desk." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body data-base="../" data-page="research">
+  <div id="site-header"></div>
+
+  <div class="page-hero" style="--hero-img:url('../assets/img/research-desk.jpg')">
+    <div class="wrap">
+      <p class="crumbs"><a href="../index.html">Lens Law</a> / Research</p>
+      <h1>Research</h1>
+      <p>Working papers, method guides and a request desk. If you are writing a dissertation, a brief or a policy submission, start here.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-label">Working papers</div>
+        <h2>Current Foundation research</h2>
+      </div>
+      <div class="grid grid-3">
+        <article class="panel reveal"><div class="section-label">WP 2024/01</div><h3>Adjournments and the cost of delay</h3><p class="muted">Coding 600 land matters to price a single wasted hearing date for the litigant and the state.</p></article>
+        <article class="panel reveal"><div class="section-label">WP 2024/02</div><h3>Ward tribunals as first responders</h3><p class="muted">Mediation outcomes at ward level and what survives review on appeal.</p></article>
+        <article class="panel reveal"><div class="section-label">WP 2024/03</div><h3>Legal aid demand mapping</h3><p class="muted">Where clinic demand exceeds supply, by district and by subject matter.</p></article>
+        <article class="panel reveal"><div class="section-label">WP 2023/07</div><h3>Kiswahili as a language of judgment</h3><p class="muted">Comprehension testing of judgments among self-represented litigants.</p></article>
+        <article class="panel reveal"><div class="section-label">WP 2023/05</div><h3>Data protection compliance in SMEs</h3><p class="muted">Baseline survey after the 2022 Act, with a low-cost compliance template.</p></article>
+        <article class="panel reveal"><div class="section-label">WP 2023/02</div><h3>Gender and matrimonial asset division</h3><p class="muted">How non-monetary contribution is pleaded, proved and valued in practice.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="grid grid-2">
+        <div>
+          <div class="section-head">
+            <div class="section-label">Method</div>
+            <h2>A research workflow that survives review</h2>
+          </div>
+          <ul class="checks">
+            <li><strong>Frame</strong> the question so it can be answered with sources you can obtain.</li>
+            <li><strong>Map</strong> the law: constitution, statute, subsidiary legislation, case law, then commentary.</li>
+            <li><strong>Verify</strong> every provision against the current consolidation and amendments.</li>
+            <li><strong>Record</strong> citations as you read; never reconstruct them later.</li>
+            <li><strong>Separate</strong> what the source says from what you argue it means.</li>
+            <li><strong>Disclose</strong> data, coding rules and limitations in an appendix.</li>
+          </ul>
+        </div>
+        <div>
+          <div class="section-head">
+            <div class="section-label">Citation</div>
+            <h2>House citation style</h2>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Source</th><th>Form</th></tr></thead>
+              <tbody>
+                <tr><td>Statute</td><td>Employment and Labour Relations Act, Cap. 366, s. 37(2)</td></tr>
+                <tr><td>Subsidiary legislation</td><td>Land Regulations, GN No. 71 of 2001, reg. 9</td></tr>
+                <tr><td>Judgment (neutral)</td><td>A v. B, Civil Appeal No. 12 of 2020 (CAT, unreported)</td></tr>
+                <tr><td>Law report</td><td>A v. B [2019] TLR 145, 152</td></tr>
+                <tr><td>Book</td><td>Author, <em>Title</em> (edition, publisher year) 44</td></tr>
+                <tr><td>Journal</td><td>Author, 'Article title' (2022) 14 Journal 3, 11</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="grid grid-2" style="align-items:center">
+        <div class="feature-media reveal"><img src="../assets/img/consult-laptop.jpg" alt="Researcher and advocate reviewing material on a laptop" /></div>
+        <div class="panel reveal">
+          <div class="section-label">Research request desk</div>
+          <h3>Ask our researchers for a memo</h3>
+          <p class="muted">Students and civil-society partners may request a short research memorandum at no cost. Turnaround is normally five working days.</p>
+          <form onsubmit="event.preventDefault(); this.querySelector('.form-note').textContent='Request captured in this demo. To send it for real, email research@lenslaw.co.tz.';">
+            <div class="form-row">
+              <div class="field"><label for="rq-name">Name</label><input id="rq-name" required /></div>
+              <div class="field"><label for="rq-email">Email</label><input id="rq-email" type="email" required /></div>
+            </div>
+            <div class="field"><label for="rq-topic">Research question</label><textarea id="rq-topic" rows="4" required placeholder="State the question, the jurisdiction and your deadline"></textarea></div>
+            <button class="btn btn-navy btn-sm" type="submit">Send request</button>
+            <p class="form-note" style="margin-top:10px"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

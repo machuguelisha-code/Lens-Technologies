@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Legal Magazine &middot; Lens Law</title>
+  <meta name="description" content="The Lens Law Legal Magazine: essays, case commentary and interviews from the bar, the bench and the academy." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body data-base="../" data-page="legal-magazine">
+  <div id="site-header"></div>
+
+  <div class="page-hero" style="--hero-img:url('../assets/img/magazine.jpg')">
+    <div class="wrap">
+      <p class="crumbs"><a href="../index.html">Lens Law</a> / Legal Magazine</p>
+      <h1>Legal Magazine</h1>
+      <p>A monthly review published by the Machugu Foundation: long-form commentary on the decisions, statutes and reforms shaping practice in Tanzania.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="feature">
+        <div class="feature-media reveal"><img src="../assets/img/newspaper.jpg" alt="Reader holding a newspaper" /></div>
+        <div class="reveal">
+          <div class="section-label">Cover story &middot; Issue 12</div>
+          <h2>Access to justice is a logistics problem</h2>
+          <p class="muted">We followed three land disputes from a ward tribunal to the High Court and measured what actually consumed the time: not argument, but service of process, adjournments and travel. The lesson for reform is unglamorous and cheap to fix.</p>
+          <div class="pill-row">
+            <span class="pill">Field report</span>
+            <span class="pill">18 min read</span>
+            <span class="pill">Land &amp; procedure</span>
+          </div>
+          <div class="hero-actions"><a class="btn btn-navy" href="#issues">Read the issue</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="issues">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-label">In this issue</div>
+        <h2>Articles and columns</h2>
+      </div>
+      <div class="grid grid-3">
+        <article class="card reveal">
+          <div class="card-media"><span class="tag">Commentary</span><img src="../assets/img/gavel.jpg" alt="Gavel" /></div>
+          <div class="card-body"><h3>Natural justice in administrative practice</h3><p>Why the right to be heard is the most litigated and least resourced principle in public administration.</p><span class="card-link">Read</span></div>
+        </article>
+        <article class="card reveal">
+          <div class="card-media"><span class="tag">Interview</span><img src="../assets/img/team.jpg" alt="Legal team in discussion" /></div>
+          <div class="card-body"><h3>"We do not need more law, we need service"</h3><p>A conversation with a district magistrate on backlog, assessors and the missing court clerk.</p><span class="card-link">Read</span></div>
+        </article>
+        <article class="card reveal">
+          <div class="card-media"><span class="tag">Legal tech</span><img src="../assets/img/analytics.jpg" alt="Analytics dashboard" /></div>
+          <div class="card-body"><h3>Can jurimetrics predict a judgment?</h3><p>What duration models can honestly claim, and the ethical line the Foundation refuses to cross.</p><span class="card-link">Read</span></div>
+        </article>
+        <article class="card reveal">
+          <div class="card-media"><span class="tag">Land</span><img src="../assets/img/tanzania.jpg" alt="Tanzanian landscape" /></div>
+          <div class="card-body"><h3>Customary title after registration</h3><p>A digest of decisions on customary occupation meeting a granted right of occupancy.</p><span class="card-link">Read</span></div>
+        </article>
+        <article class="card reveal">
+          <div class="card-media"><span class="tag">Students</span><img src="../assets/img/library-spiral.jpg" alt="Library staircase" /></div>
+          <div class="card-body"><h3>Mooting as legal education</h3><p>How three universities rebuilt their clinical programmes around the Foundation's clinics.</p><span class="card-link">Read</span></div>
+        </article>
+        <article class="card reveal">
+          <div class="card-media"><span class="tag">Practice</span><img src="../assets/img/writing-notes.jpg" alt="Writing notes" /></div>
+          <div class="card-body"><h3>Drafting an affidavit that survives</h3><p>Facts, not argument: the five defects that get affidavits struck out.</p><span class="card-link">Read</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark">
+    <div class="wrap">
+      <div class="grid grid-2" style="align-items:center">
+        <div>
+          <div class="section-label">Write for us</div>
+          <h2>Submissions are open</h2>
+          <p class="muted">We publish practitioners, judicial officers, academics and students. Send an abstract of 300 words with your proposed word count and two references.</p>
+        </div>
+        <div class="panel">
+          <form onsubmit="event.preventDefault(); this.querySelector('.form-note').textContent='Thank you. This demo form does not send email yet - write to editor@lenslaw.co.tz.';">
+            <div class="field"><label for="mg-name">Name</label><input id="mg-name" required /></div>
+            <div class="field"><label for="mg-email">Email</label><input id="mg-email" type="email" required /></div>
+            <div class="field"><label for="mg-abstract">Abstract</label><textarea id="mg-abstract" rows="4" required></textarea></div>
+            <button class="btn btn-gold btn-sm" type="submit">Submit abstract</button>
+            <p class="form-note" style="margin-top:10px"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Legal Documents &middot; Lens Law</title>
+  <meta name="description" content="Vetted Tanzanian legal document templates: contracts, affidavits, wills, deeds, pleadings and corporate forms with drafting notes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body data-base="../" data-page="legal-documents">
+  <div id="site-header"></div>
+
+  <div class="page-hero" style="--hero-img:url('../assets/img/signing-document.jpg')">
+    <div class="wrap">
+      <p class="crumbs"><a href="../index.html">Lens Law</a> / Legal Documents</p>
+      <h1>Legal Documents</h1>
+      <p>A document bank of instruments used every day in Tanzanian practice. Each template carries drafting notes, the statute or rule it is built on, and the stamp duty or filing fee to expect.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-label">Document bank</div>
+        <h2>Find a template</h2>
+        <p>Filter by category, then read the notes before you adapt a document to your facts.</p>
+      </div>
+
+      <div class="panel" style="margin-bottom:26px">
+        <div class="form-row">
+          <div>
+            <label for="doc-search">Search documents</label>
+            <input id="doc-search" type="search" placeholder="e.g. affidavit, lease, employment" />
+          </div>
+          <div>
+            <label for="doc-cat">Category</label>
+            <select id="doc-cat">
+              <option value="">All categories</option>
+              <option>Contracts &amp; commercial</option>
+              <option>Land &amp; conveyancing</option>
+              <option>Family &amp; succession</option>
+              <option>Employment</option>
+              <option>Litigation &amp; pleadings</option>
+              <option>Corporate &amp; compliance</option>
+            </select>
+          </div>
+        </div>
+        <p class="form-note" id="doc-count"></p>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Document</th><th>Category</th><th>Governing law / rule</th><th>Notes</th></tr>
+          </thead>
+          <tbody id="doc-rows"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="feature">
+        <div class="feature-media reveal"><img src="../assets/img/documents.jpg" alt="Legal documents laid out on a desk" /></div>
+        <div class="reveal">
+          <div class="section-label">How to use a template</div>
+          <h2>A template is a starting point, never the answer</h2>
+          <ul class="checks">
+            <li>Read the drafting note first: it tells you which clauses are mandatory.</li>
+            <li>Replace every bracketed placeholder; unfilled placeholders defeat a document.</li>
+            <li>Check execution: attestation, witnesses, commissioner for oaths, company seal.</li>
+            <li>Confirm stamp duty and registration deadlines before signature.</li>
+            <li>When value or risk is high, have an advocate review the final draft.</li>
+          </ul>
+          <div class="hero-actions"><a class="btn btn-navy" href="legal-aid.html#book">Ask an advocate to review a draft</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/documents.js"></script>
+</body>
+</html>

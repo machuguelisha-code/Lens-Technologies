@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Samwel AI &middot; Lens Law</title>
+  <meta name="description" content="Samwel AI, the Lens Law legal research assistant: plain-language answers with the Tanzanian authorities to read next." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body data-base="../" data-page="samwel-ai">
+  <div id="site-header"></div>
+
+  <div class="page-hero" style="--hero-img:url('../assets/img/ai.jpg')">
+    <div class="wrap">
+      <p class="crumbs"><a href="../index.html">Lens Law</a> / Samwel AI</p>
+      <h1>Samwel AI</h1>
+      <p>Your first stop for a legal question. Samwel explains the position in plain language, names the statute or authority to read, and tells you when a human advocate is the only safe answer.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="grid" style="grid-template-columns:1.4fr 1fr;gap:34px">
+        <div>
+          <div class="section-head">
+            <div class="section-label">Ask a question</div>
+            <h2>Talk to Samwel</h2>
+            <p>This on-page assistant is a guided demonstration: it answers from a curated knowledge base of Tanzanian law topics without sending your question anywhere.</p>
+          </div>
+          <div class="chip-row" id="chips"></div>
+          <div class="chat">
+            <div class="chat-log" id="chat-log" aria-live="polite"></div>
+            <form class="chat-form" id="chat-form">
+              <label class="sr-only" for="chat-input" style="display:none">Your question</label>
+              <input id="chat-input" type="text" autocomplete="off" placeholder="Ask about employment, land, divorce, bail, contracts&hellip;" />
+              <button class="btn btn-navy btn-sm" type="submit">Send</button>
+            </form>
+          </div>
+          <p class="form-note" style="margin-top:12px">Samwel gives legal information, not legal advice. For a decision on your own facts, <a href="legal-aid.html#book">book a consultation</a>.</p>
+        </div>
+        <aside>
+          <div class="panel" style="margin-bottom:20px">
+            <h3>What Samwel is good at</h3>
+            <ul class="checks">
+              <li>Explaining a procedure step by step</li>
+              <li>Pointing to the governing Act and section</li>
+              <li>Listing the documents you must gather</li>
+              <li>Flagging limitation periods and deadlines</li>
+              <li>Answering in English or Kiswahili</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>What it will never do</h3>
+            <ul class="checks">
+              <li>Predict how a named judge will rule</li>
+              <li>Draft a final court document unreviewed</li>
+              <li>Store or share your personal facts</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="dark">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-label">How it works</div>
+        <h2>Retrieval first, generation second</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="panel"><h3>1. Retrieve</h3><p class="muted">Your question is matched against the Lens Law corpus: statutes, TanzLII judgments, practice directions and our own digests.</p></div>
+        <div class="panel"><h3>2. Ground</h3><p class="muted">Only retrieved passages are used to compose the answer, so every statement can be traced to a source.</p></div>
+        <div class="panel"><h3>3. Hand over</h3><p class="muted">Where the question needs judgement or facts, Samwel routes you to the legal aid desk instead of guessing.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/samwel.js"></script>
+</body>
+</html>
