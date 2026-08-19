@@ -9,7 +9,7 @@ const SECTIONS = [
   { id: 'weather', name: 'Weather', href: 'pages/weather.html' },
   { id: 'tanzlii', name: 'TanzLII', href: 'pages/tanzlii.html' },
   { id: 'decided-cases', name: 'Decided Cases', href: 'pages/decided-cases.html' },
-  { id: 'bech', name: 'Bech', href: 'pages/bech.html' },
+  { id: 'bench', name: 'Bench', href: 'pages/bench.html' },
   { id: 'legal-magazine', name: 'Legal Magazine', href: 'pages/legal-magazine.html' },
   { id: 'jurimetric', name: 'Jurimetric', href: 'pages/jurimetric.html' },
   { id: 'research', name: 'Research', href: 'pages/research.html' },
@@ -29,7 +29,7 @@ function renderHeader() {
     <div class="topbar">
       <div class="wrap">
         <span>Machugu Foundation &middot; Dar es Salaam, Tanzania</span>
-        <span>Mon&ndash;Fri 08:00&ndash;17:00 EAT &middot; <a href="mailto:info@lenslaw.co.tz">info@lenslaw.co.tz</a></span>
+        <span>Mon&ndash;Fri 08:00&ndash;17:00 EAT &middot; <a href="mailto:lenstechnology.tz@outlook.com">lenstechnology.tz@outlook.com</a></span>
       </div>
     </div>
     <header class="site-header">

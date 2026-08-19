@@ -35,3 +35,14 @@ Logo: `lens-law-mark.svg`, `lens-law-mark-gold.svg` and the favicons are vector 
 
 Fonts: Playfair Display and Inter, served from Google Fonts under the SIL Open Font License.
 Weather data: [Open-Meteo](https://open-meteo.com/) free API (no key required).
+
+Judicial and case data (`assets/js/data/`), retrieved 19 August 2026:
+
+| Dataset | Source |
+| --- | --- |
+| Judiciary leadership and High Court judge records | [Judiciary of Tanzania](https://www.judiciary.go.tz/) |
+| Justices of Appeal, judgment volumes, registry workload | [TanzLII Court of Appeal collections](https://tanzlii.org/en/judgments/TZCA/) |
+| Court of Appeal judgments, summaries and headnotes | [TanzLII](https://tanzlii.org/), reproduced under its open-access terms |
+
+Area of law and outcome labels are coded by Lens Law from TanzLII's own headnotes and summaries; the underlying
+judgments are the authoritative text.

@@ -292,7 +292,18 @@ label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--navy)
 .chart-card canvas { width: 100%; height: 240px; }
 .legend { display: flex; gap: 16px; flex-wrap: wrap; font-size: 0.8rem; color: var(--muted); margin-top: 10px; }
 .legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; margin-right: 6px; }
+.chart-card canvas.tall { height: 320px; }
 .kpi-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 18px; }
+
+/* ---------- Judicial profiles and case cards ---------- */
+.judge h3 { margin: 6px 0 2px; font-size: 1.04rem; }
+.judge[hidden] { display: none; }
+.judge-meta { margin: 12px 0 0; font-size: 0.88rem; }
+.judge-meta dt { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+.judge-meta dd { margin: 2px 0 10px; color: var(--ink); }
+.dark .judge-meta dd { color: #e6edf6; }
+.case h3 { margin: 6px 0 4px; font-size: 1.02rem; }
+.case p { font-size: 0.9rem; }
 .kpi { background: var(--white); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px; box-shadow: var(--shadow-sm); }
 .kpi strong { display: block; font-family: "Playfair Display", serif; font-size: 2.1rem; color: var(--navy); }
 .kpi span { font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
