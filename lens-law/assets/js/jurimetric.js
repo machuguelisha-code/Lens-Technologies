@@ -15,7 +15,7 @@ function setup(canvas) {
   const ctx = canvas.getContext('2d');
   ctx.scale(dpr, dpr);
   ctx.clearRect(0, 0, w, h);
-  ctx.font = '11px Inter, sans-serif';
+  ctx.font = `${w < 420 ? 10 : 11}px Inter, sans-serif`;
   return { ctx, w, h };
 }
 
@@ -44,7 +44,9 @@ function durationChart() {
     ['Family', 15], ['Land', 22], ['Tax', 18]
   ];
   const { ctx, w, h } = setup(canvas);
-  const pad = { top: 14, right: 12, bottom: 34, left: 34 };
+  const slot = (w - 46) / data.length;
+  const rotate = data.some(([label]) => ctx.measureText(label).width > slot - 4);
+  const pad = { top: 14, right: 12, bottom: rotate ? 56 : 34, left: 34 };
   const max = 25;
   axes(ctx, w, h, pad, max, 5);
   const plotW = w - pad.left - pad.right;
@@ -62,7 +64,16 @@ function durationChart() {
     ctx.textAlign = 'center';
     ctx.fillText(`${value}m`, x + bw / 2, pad.top + plotH - bh - 5);
     ctx.fillStyle = MUTED;
-    ctx.fillText(label, x + bw / 2, h - 12);
+    if (rotate) {
+      ctx.save();
+      ctx.translate(x + bw / 2 + 4, h - 8);
+      ctx.rotate(-Math.PI / 4);
+      ctx.textAlign = 'right';
+      ctx.fillText(label, 0, 0);
+      ctx.restore();
+    } else {
+      ctx.fillText(label, x + bw / 2, h - 12);
+    }
   });
 }
 
