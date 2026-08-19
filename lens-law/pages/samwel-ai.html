@@ -31,14 +31,14 @@
           <div class="section-head">
             <div class="section-label">Ask a question</div>
             <h2>Talk to Samwel</h2>
-            <p>This on-page assistant is a guided demonstration: it answers from a curated knowledge base of Tanzanian law topics without sending your question anywhere.</p>
+            <p>Samwel answers only on Tanzanian law, from a curated corpus of the Laws of Tanzania and the decided cases of the Court of Appeal indexed on TanzLII. It runs in your browser: your question is never sent anywhere.</p>
           </div>
           <div class="chip-row" id="chips"></div>
           <div class="chat">
             <div class="chat-log" id="chat-log" aria-live="polite"></div>
             <form class="chat-form" id="chat-form">
               <label class="sr-only" for="chat-input" style="display:none">Your question</label>
-              <input id="chat-input" type="text" autocomplete="off" placeholder="Ask about employment, land, divorce, bail, contracts&hellip;" />
+              <input id="chat-input" type="text" autocomplete="off" placeholder="Ask about employment, land, tax, bail, appeals, or paste [2026] TZCA 148&hellip;" />
               <button class="btn btn-navy btn-sm" type="submit">Send</button>
             </form>
           </div>
@@ -53,6 +53,7 @@
               <li>Listing the documents you must gather</li>
               <li>Flagging limitation periods and deadlines</li>
               <li>Answering in English or Kiswahili</li>
+              <li>Finding Court of Appeal decisions on the point, with citations</li>
             </ul>
           </div>
           <div class="panel">
@@ -84,6 +85,7 @@
 
   <div id="site-footer"></div>
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/data/tz-cases.js"></script>
   <script src="../assets/js/samwel.js"></script>
 </body>
 </html>

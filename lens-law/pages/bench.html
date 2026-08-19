@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bench &middot; Lens Law</title>
+  <meta name="description" content="The Bench desk: Tanzanian judges and Justices of Appeal with their profiles, the court hierarchy, jurisdiction and judicial etiquette." />
+  <link rel="icon" type="image/svg+xml" href="../assets/img/lens-law-mark.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png" />
+  <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+</head>
+<body data-base="../" data-page="bench">
+  <div id="site-header"></div>
+
+  <div class="page-hero" style="--hero-img:url('../assets/img/justice-statue.jpg')">
+    <div class="wrap">
+      <p class="crumbs"><a href="../index.html">Lens Law</a> / Bench</p>
+      <h1>Bench</h1>
+      <p>The judges of Tanzania: who sits where, what they may decide, and how to appear before them properly &mdash; from the Ward Tribunal to the Court of Appeal.</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-label">Judicial leadership</div>
+        <h2>Who leads the Judiciary of Tanzania</h2>
+        <p>As published by the Judiciary of Tanzania.</p>
+      </div>
+      <div class="grid grid-4" id="bench-leadership"></div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-label">Judicial profiles</div>
+        <h2>Justices of Appeal and Judges of the High Court</h2>
+        <p>Justices of Appeal are named here exactly as they are named in their reported judgments, with the years and registries in which those judgments appear. High Court entries carry the title and date of appointment published by the Judiciary.</p>
+      </div>
+      <div class="panel" style="margin-bottom:26px">
+        <div class="form-row">
+          <div>
+            <label for="judge-search">Search by name</label>
+            <input id="judge-search" type="search" placeholder="e.g. Kihwelo, Levira, Siyani" />
+          </div>
+          <div>
+            <label for="judge-filter">Show</label>
+            <select id="judge-filter">
+              <option value="">All profiles</option>
+              <option value="sitting">Reported in 2026</option>
+              <option value="earlier">Earlier years only</option>
+            </select>
+          </div>
+        </div>
+        <p class="form-note" id="judge-count"></p>
+      </div>
+
+      <h3 style="margin:0 0 16px">Court of Appeal of Tanzania</h3>
+      <div class="grid grid-3" id="bench-justices"></div>
+
+      <h3 style="margin:38px 0 16px">High Court of Tanzania</h3>
+      <div class="grid grid-3" id="bench-highcourt"></div>
+      <p class="form-note" style="margin-top:14px">The Judiciary's public judges directory is paginated; the entries above are the records it returned to us, not the full complement of the High Court. Consult <a href="https://www.judiciary.go.tz/judgeofhighcourt" target="_blank" rel="noopener">the Judiciary's own directory</a> for the current list.</p>
+
+      <p class="form-note" style="margin-top:22px">Sources: <a href="https://www.judiciary.go.tz/justiceofappeal" target="_blank" rel="noopener">Judiciary of Tanzania</a> and the <a href="https://tanzlii.org/en/judgments/TZCA/" target="_blank" rel="noopener">TanzLII Court of Appeal collections</a>, retrieved 19 August 2026. Where the Judiciary publishes no biography, none is shown here &mdash; we do not write biographies ourselves. A Justice may sit in registries or years beyond those recorded above; the record reflects published judgments only.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-label">Hierarchy</div>
+        <h2>The courts, from the ward to the apex</h2>
+        <p>Jurisdiction is the first question in every matter. Filing in the wrong forum makes the whole proceeding a nullity.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Forum</th><th>Composition</th><th>Jurisdiction</th><th>Appeal lies to</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Court of Appeal</strong></td><td>Justices of Appeal, sitting in benches of three or five</td><td>Final appellate court; appeals and revisions from the High Court</td><td>&mdash;</td></tr>
+            <tr><td><strong>High Court</strong> (Main and Divisions: Commercial, Land, Labour, Corruption &amp; Economic Crimes)</td><td>Judges, sitting singly</td><td>Unlimited original jurisdiction; appellate and supervisory jurisdiction</td><td>Court of Appeal</td></tr>
+            <tr><td><strong>Resident Magistrate's Court</strong></td><td>Resident Magistrates</td><td>Civil and criminal matters within statutory limits</td><td>High Court</td></tr>
+            <tr><td><strong>District Court</strong></td><td>District Magistrates</td><td>Civil and criminal matters within lower statutory limits</td><td>High Court</td></tr>
+            <tr><td><strong>Primary Court</strong></td><td>Primary Court Magistrate with assessors</td><td>Customary and Islamic law matters, small civil claims</td><td>District Court</td></tr>
+            <tr><td><strong>District Land and Housing Tribunal</strong></td><td>Chairman with assessors</td><td>Land disputes above the ward limit</td><td>High Court (Land Division)</td></tr>
+            <tr><td><strong>Ward Tribunal</strong></td><td>Elected members, mediation first</td><td>Small land and civil disputes within the ward</td><td>District Land and Housing Tribunal</td></tr>
+            <tr><td><strong>CMA</strong></td><td>Mediators and arbitrators</td><td>Labour disputes: mediation then arbitration</td><td>High Court (Labour Division)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <div class="feature">
+        <div class="feature-media reveal"><img src="../assets/img/courthouse.jpg" alt="Courthouse colonnade" /></div>
+        <div class="reveal">
+          <div class="section-label">Appearing before the Bench</div>
+          <h2>Etiquette that earns you a hearing</h2>
+          <ul class="checks">
+            <li>Be robed and seated before the court rises; announce appearances clearly.</li>
+            <li>Address the court correctly: "My Lord/My Lady" in the High Court and above.</li>
+            <li>File and serve within time; ask for indulgence only with an affidavit.</li>
+            <li>Answer the question the judge asked before returning to your submission.</li>
+            <li>Never misstate an authority: correct the record the moment you notice.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-label">Practice notes</div>
+        <h2>What the Bench keeps repeating</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="panel"><h3>Plead jurisdiction</h3><p class="muted">State the forum's pecuniary and territorial jurisdiction on the face of the pleading.</p></div>
+        <div class="panel"><h3>Respect time limits</h3><p class="muted">Delay must be accounted for day by day; inadvertence is rarely sufficient cause.</p></div>
+        <div class="panel"><h3>Cite accurately</h3><p class="muted">Neutral citation, court, year and the exact paragraph relied on.</p></div>
+        <div class="panel"><h3>Serve properly</h3><p class="muted">Defective service is the most common cause of wasted hearing dates.</p></div>
+        <div class="panel"><h3>Use assessors correctly</h3><p class="muted">In tribunals, record their opinions; omission is a ground of appeal.</p></div>
+        <div class="panel"><h3>Settle where possible</h3><p class="muted">Mediation is mandatory in several tracks and is measured in the case audit.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div id="site-footer"></div>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/data/tz-judiciary.js"></script>
+  <script src="../assets/js/bench.js"></script>
+</body>
+</html>

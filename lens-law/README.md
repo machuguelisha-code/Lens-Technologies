@@ -8,13 +8,13 @@ A static, dependency-free website for **Lens Law**, a legal knowledge platform o
 | --- | --- | --- |
 | Home | `index.html` | Hero with the Lens Law wordmark and "Machugu Foundation", cards for all 11 desks |
 | Legal Documents | `pages/legal-documents.html` | Filterable bank of 22 Tanzanian document templates with drafting notes |
-| Samwel AI | `pages/samwel-ai.html` | In-browser legal assistant with cited authorities (no data leaves the page) |
+| Samwel AI | `pages/samwel-ai.html` | In-browser assistant on Tanzanian statutes and Court of Appeal judgments, with citations and neutral-citation lookup (no data leaves the page) |
 | Weather | `pages/weather.html` | Live forecasts for 8 court stations via the key-free Open-Meteo API |
 | TanzLII | `pages/tanzlii.html` | Guided gateway to free Tanzanian law plus search technique |
 | Decided Cases | `pages/decided-cases.html` | Searchable teaching digests (issue / holding / ratio / effect) |
-| Bech | `pages/bech.html` | The Bench: court hierarchy, jurisdiction and etiquette |
+| Bench | `pages/bench.html` | Tanzanian judges and Justices of Appeal with published profiles, court hierarchy and etiquette |
 | Legal Magazine | `pages/legal-magazine.html` | Cover story, article grid, submissions form |
-| Jurimetric | `pages/jurimetric.html` | Four canvas dashboards: duration, filings vs disposals, outcomes, stage timing |
+| Jurimetric | `pages/jurimetric.html` | Canvas dashboards over Tanzanian judicial data: judgments per year, registry workload, years on the bench per Justice, subject matter and outcomes of decided cases |
 | Research | `pages/research.html` | Working papers, method workflow, house citation style, request desk |
 | Library | `pages/library.html` | Collections, open-access links, reading room and title requests |
 | Legal Aid & Consultancy | `pages/legal-aid.html` | Clinic timetable and a consultation booking form (`#book`) |
@@ -43,7 +43,9 @@ The header, navigation and footer are rendered once by `assets/js/main.js` from 
 
 ## Content caveats
 
-- Case digests use anonymised parties (`A v. B`) and teach the principle; they are not substitutes for reading the real judgment on TanzLII.
-- Jurimetric figures are an illustrative coded sample, not official judiciary statistics.
+- Case digests on the Decided Cases desk use anonymised parties (`A v. B`) and teach the principle; they are not substitutes for reading the real judgment on TanzLII.
+- Tanzanian judicial data lives in `assets/js/data/`: `tz-judiciary.js` (Judiciary of Tanzania leadership and High Court judge records; Justices of Appeal, judgment volumes and registries as published in the TanzLII Court of Appeal collections) and `tz-cases.js` (Court of Appeal judgments with neutral citations). Both were retrieved on 19 August 2026.
+- No biography, holding or statistic is invented: where the Judiciary publishes no profile detail, the field is simply absent, and area of law and outcome are coded from TanzLII's own headnotes and summaries.
+- Jurimetric counts are drawn from published court records; they are not official Judiciary statistics, and no outcome is attributed to a named judge because the coram of each judgment is not in the dataset.
 - Forms (booking, magazine submission, library and research requests) are front-end only; wire them to an email service or backend before launch.
-- Contact details and phone numbers are placeholders.
+- Contact: lenstechnology.tz@outlook.com and elishamachugu@outlook.com.

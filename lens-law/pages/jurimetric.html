@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Jurimetric &middot; Lens Law</title>
-  <meta name="description" content="Jurimetric: measuring the law with filings, disposal rates, appeal outcomes and case duration analytics." />
+  <meta name="description" content="Jurimetric: quantitative analysis of Tanzanian judges, Justices of Appeal and decided cases of the Court of Appeal of Tanzania." />
   <link rel="icon" type="image/svg+xml" href="../assets/img/lens-law-mark.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png" />
   <link rel="apple-touch-icon" href="../assets/img/apple-touch-icon.png" />
@@ -20,62 +20,115 @@
     <div class="wrap">
       <p class="crumbs"><a href="../index.html">Lens Law</a> / Jurimetric</p>
       <h1>Jurimetric</h1>
-      <p>Jurimetrics is the quantitative study of law: counting what courts do, not only reading what they say. These dashboards are built from the Foundation's own coded sample of matters.</p>
+      <p>Jurimetrics is the quantitative study of law: counting what courts do, not only reading what they say. This desk measures the Court of Appeal of Tanzania &mdash; its Justices, its registries and its decided cases.</p>
     </div>
   </div>
 
   <section>
     <div class="wrap">
       <div class="kpi-row" style="margin-bottom:34px">
-        <div class="kpi"><strong>1,482</strong><span>Matters coded</span></div>
-        <div class="kpi"><strong>14.6</strong><span>Median months to judgment</span></div>
-        <div class="kpi"><strong>63%</strong><span>Disposal rate per year</span></div>
-        <div class="kpi"><strong>28%</strong><span>Appeals allowed in part or full</span></div>
+        <div class="kpi"><strong id="kpi-judgments">&ndash;</strong><span>Court of Appeal judgments indexed 2019&ndash;2026</span></div>
+        <div class="kpi"><strong id="kpi-latest">&ndash;</strong><span>Judgments reported in 2026</span></div>
+        <div class="kpi"><strong id="kpi-justices">&ndash;</strong><span>Justices of Appeal on the record</span></div>
+        <div class="kpi"><strong id="kpi-coded">&ndash;</strong><span>Judgments coded in this dataset</span></div>
       </div>
 
       <div class="grid grid-2">
         <div class="chart-card reveal">
-          <h3>Median duration by area of law</h3>
-          <p class="muted">Months from filing to first-instance judgment.</p>
-          <canvas id="chart-duration" width="600" height="240" role="img" aria-label="Bar chart of median case duration by area of law"></canvas>
+          <h3>Judgments delivered per year</h3>
+          <p class="muted">Court of Appeal of Tanzania, as published on TanzLII.</p>
+          <canvas id="chart-volume" width="600" height="240" role="img" aria-label="Column chart of Court of Appeal judgments published per year"></canvas>
         </div>
         <div class="chart-card reveal">
-          <h3>Filings and disposals by year</h3>
-          <p class="muted">Coded sample, 2018&ndash;2024.</p>
-          <canvas id="chart-flow" width="600" height="240" role="img" aria-label="Line chart of filings versus disposals by year"></canvas>
-          <div class="legend"><span><i style="background:#1b3a63"></i>Filings</span><span><i style="background:#c8a45a"></i>Disposals</span></div>
+          <h3>2026 workload by registry</h3>
+          <p class="muted">Judgments delivered in each Court of Appeal registry in 2026.</p>
+          <canvas id="chart-registry" width="600" height="240" role="img" aria-label="Bar chart of 2026 judgments per Court of Appeal registry"></canvas>
         </div>
         <div class="chart-card reveal">
-          <h3>Outcomes at first instance</h3>
-          <p class="muted">Share of coded matters by result.</p>
-          <canvas id="chart-outcome" width="600" height="240" role="img" aria-label="Donut chart of case outcomes"></canvas>
-          <div class="legend" id="outcome-legend"></div>
+          <h3>Years on the Court of Appeal record</h3>
+          <p class="muted">Number of years in which each Justice has reported judgments (top twelve).</p>
+          <canvas class="tall" id="chart-bench" width="600" height="320" role="img" aria-label="Bar chart of years with reported judgments per Justice of Appeal"></canvas>
         </div>
         <div class="chart-card reveal">
-          <h3>Where the time actually goes</h3>
-          <p class="muted">Share of elapsed time per stage, land and commercial matters.</p>
-          <canvas id="chart-stages" width="600" height="240" role="img" aria-label="Stacked bar chart of time spent per procedural stage"></canvas>
-          <div class="legend" id="stage-legend"></div>
+          <h3>Justice of Appeal profile</h3>
+          <p class="muted">Choose a Justice to see their reported record.</p>
+          <div class="field">
+            <label for="juri-judge">Justice of Appeal</label>
+            <select id="juri-judge"><option value="">Select a Justice</option></select>
+          </div>
+          <div id="juri-justice"></div>
         </div>
       </div>
-      <p class="form-note" style="margin-top:20px">Figures are from the Foundation's internal coded sample and are published for methodological illustration. They are not official judiciary statistics.</p>
+      <p class="form-note" style="margin-top:20px">TanzLII lists the Justices who sat in each collection but does not expose the coram of every individual judgment, so Lens Law does not attribute decisions or outcome rates to a named Justice. We publish only what the record supports: presence on the bench by year and registry.</p>
     </div>
   </section>
 
-  <section class="alt">
+  <section class="alt" id="decided">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="section-label">Decided cases</div>
+        <h2>What the Court of Appeal actually decided</h2>
+        <p>Filter the coded judgments below; the subject-matter and outcome charts recalculate from your selection.</p>
+      </div>
+
+      <div class="panel" style="margin-bottom:26px">
+        <div class="form-row">
+          <div>
+            <label for="juri-search">Search parties, citation or headnote</label>
+            <input id="juri-search" type="search" placeholder="e.g. retrenchment, VAT, extension of time" />
+          </div>
+          <div>
+            <label for="juri-area">Area of law</label>
+            <select id="juri-area"><option value="">All areas</option></select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div>
+            <label for="juri-year">Year of judgment</label>
+            <select id="juri-year"><option value="">All years</option></select>
+          </div>
+          <div>
+            <label for="juri-registry">Registry</label>
+            <select id="juri-registry"><option value="">All registries</option></select>
+          </div>
+        </div>
+        <p class="form-note" id="juri-count"></p>
+      </div>
+
+      <div class="grid grid-2" style="margin-bottom:30px">
+        <div class="chart-card reveal">
+          <h3>Subject matter of the selection</h3>
+          <p class="muted">Areas of law coded from the TanzLII headnotes.</p>
+          <canvas id="chart-area" width="600" height="240" role="img" aria-label="Donut chart of areas of law in the selected judgments"></canvas>
+          <div class="legend" id="area-legend"></div>
+        </div>
+        <div class="chart-card reveal">
+          <h3>Outcomes of the selection</h3>
+          <p class="muted">Coded from the published summary of each judgment.</p>
+          <canvas id="chart-outcome" width="600" height="240" role="img" aria-label="Bar chart of outcomes in the selected judgments"></canvas>
+        </div>
+      </div>
+
+      <div class="grid grid-2" id="juri-cases"></div>
+    </div>
+  </section>
+
+  <section>
     <div class="wrap">
       <div class="feature reverse">
         <div class="feature-media reveal"><img src="../assets/img/research-desk.jpg" alt="Analyst working at a research desk" /></div>
         <div class="reveal">
           <div class="section-label">Method</div>
-          <h2>How a matter becomes a data point</h2>
+          <h2>How a judgment becomes a data point</h2>
           <ul class="checks">
-            <li>Sampling frame: judgments published on TanzLII plus our own case files.</li>
-            <li>Double coding: two coders per matter, disagreements resolved by a third.</li>
-            <li>Variables: forum, area, date filed, date decided, stages, outcome, appeal.</li>
-            <li>No personal data: parties are pseudonymised before analysis.</li>
-            <li>We publish duration and outcome distributions, never judge-level predictions.</li>
+            <li>Sampling frame: the Court of Appeal collections published on TanzLII, retrieved 19 August 2026.</li>
+            <li>Volumes per year and per registry are TanzLII's own counts, not our estimates.</li>
+            <li>Area of law is coded from TanzLII's subject headnotes; outcome from its case summary.</li>
+            <li>Where a summary does not state the result we record "Not stated in summary" rather than guess.</li>
+            <li>Every case carries its neutral citation and a link, so you can verify before you cite.</li>
+            <li>No judge-level outcome predictions: the coram of each judgment is not in the dataset.</li>
           </ul>
+          <p class="form-note">These are published court records, not official Judiciary statistics. Read the full judgment before relying on any entry.</p>
         </div>
       </div>
     </div>
@@ -83,6 +136,8 @@
 
   <div id="site-footer"></div>
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/data/tz-judiciary.js"></script>
+  <script src="../assets/js/data/tz-cases.js"></script>
   <script src="../assets/js/jurimetric.js"></script>
 </body>
 </html>
